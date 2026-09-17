@@ -1,0 +1,91 @@
+════════════════════════════════════════════════════════════════════════════
+              PYTHONANYWHERE DEPLOYMENT GUIDE
+              (Free, 24/7, No Credit Card)
+════════════════════════════════════════════════════════════════════════════
+
+✅ GRATIS SELAMANYA - tidak perlu bayar sama sekali!
+
+════════════════════════════════════════════════════════════════════════════
+  STEP 1: CREATE PYTHONANYWHERE ACCOUNT (2 MENIT)
+════════════════════════════════════════════════════════════════════════════
+
+1. Go to: https://www.pythonanywhere.com
+2. Click "Sign up" (top right)
+3. Choose: Free account
+4. Fill form:
+   - Username: [pilih username]
+   - Email: [email kamu]
+   - Password: [password]
+5. Click "Register"
+6. Verify email
+7. Done! ✓
+
+════════════════════════════════════════════════════════════════════════════
+  STEP 2: UPLOAD PROJECT FILES (5 MENIT)
+════════════════════════════════════════════════════════════════════════════
+
+Easiest way - use Git in Bash console:
+
+1. Click "Consoles" tab
+2. Click "Bash"
+3. Run:
+
+   git clone https://github.com/elgptr/ai-revenue-machine.git
+   cd ai-revenue-machine
+   
+   (Copy config.json dari local ke sini)
+
+════════════════════════════════════════════════════════════════════════════
+  STEP 3: INSTALL DEPENDENCIES (5 MENIT)
+════════════════════════════════════════════════════════════════════════════
+
+In Bash console:
+
+cd ~/ai-revenue-machine
+pip install --user -r requirements.txt
+
+Wait untuk semua install...
+
+════════════════════════════════════════════════════════════════════════════
+  STEP 4: SETUP SCHEDULED TASK - CONTENT (3 MENIT)
+════════════════════════════════════════════════════════════════════════════
+
+Daily article generation (Track 1)
+
+1. Click "Tasks" menu
+2. Click "Create a new scheduled task"
+3. UTC time: 08:00
+4. Command: python ~/ai-revenue-machine/main_pythonanywhere.py
+5. Create
+
+Done! Runs every day at 8 AM UTC.
+
+════════════════════════════════════════════════════════════════════════════
+  STEP 5: SETUP TELEGRAM BOT (TRACK 2) (5 MENIT)
+════════════════════════════════════════════════════════════════════════════
+
+Always-on bot:
+
+1. Click "Web"
+2. "Add a new web app"
+3. Manual configuration
+4. Python 3.10
+5. Edit WSGI: use pythonanywhere_wsgi.py
+6. Reload
+7. Get URL: https://[username].pythonanywhere.com
+8. Set Telegram webhook to that URL
+
+════════════════════════════════════════════════════════════════════════════
+  VERIFY AFTER SETUP
+════════════════════════════════════════════════════════════════════════════
+
+✓ Task runs daily at 8 AM UTC
+✓ Articles publish to Dev.to
+✓ Telegram bot responds
+✓ Revenue accumulates
+
+════════════════════════════════════════════════════════════════════════════
+
+Total cost: $0 | Forever free | 24/7 active
+
+Your system is LIVE! 🚀

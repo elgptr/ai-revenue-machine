@@ -1,0 +1,33 @@
+╔════════════════════════════════════════════════════════════════╗
+║   ✅ SWITCHED TO PYTHONANYWHERE (FREE, NO CREDIT CARD!)        ║
+╚════════════════════════════════════════════════════════════════╝
+
+Maaf untuk error sebelumnya tentang Render gratis. Ini yang lebih baik!
+
+════════════════════════════════════════════════════════════════════
+
+🎯 QUICK START - 15 MENIT TO LIVE
+
+1. Go to: https://www.pythonanywhere.com
+2. Sign up (free account, no CC needed)
+3. Verify email
+4. In Bash console, run:
+   git clone https://github.com/elgptr/ai-revenue-machine.git
+
+5. Add config.json ke ~/ai-revenue-machine/
+6. Install: pip install --user -r requirements.txt
+7. Create scheduled task:
+   - Time: 08:00 UTC
+   - Command: python ~/ai-revenue-machine/main_pythonanywhere.py
+
+8. Setup web app untuk Telegram bot
+
+Done! ✓ Running 24/7 for FREE!
+
+════════════════════════════════════════════════════════════════════
+
+📚 Full guide: See PYTHONANYWHERE_DEPLOYMENT.txt
+
+💰 Cost: $0
+
+🚀 Status: Ready to deploy!
