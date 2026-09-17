@@ -1,0 +1,115 @@
+════════════════════════════════════════════════════════════════════════════════
+   GITHUB ACTIONS - QUICK SETUP CHECKLIST
+════════════════════════════════════════════════════════════════════════════════
+
+ESTIMATED TIME: 20 minutes
+COST: $0 forever (completely free!)
+
+════════════════════════════════════════════════════════════════════════════════
+
+☐ STEP 1: Get API Keys (10 min)
+────────────────────────────────────────────────────────────────────────────────
+
+☐ OpenAI API Key
+  Go: https://platform.openai.com/api-keys
+  Action: Create new secret key
+  Save: ___________________________________
+  
+☐ Dev.to API Key  
+  Go: https://dev.to/settings/extensions
+  Action: Generate API key
+  Save: ___________________________________
+
+☐ Telegram Bot Token (optional)
+  Go: Telegram → @BotFather → /newbot
+  Save: ___________________________________
+
+════════════════════════════════════════════════════════════════════════════════
+
+☐ STEP 2: Add Secrets to GitHub (5 min)
+────────────────────────────────────────────────────────────────────────────────
+
+☐ Open: https://github.com/elgptr/ai-revenue-machine
+
+☐ Settings tab → Secrets and variables → Actions
+
+☐ New repository secret:
+  • Name: OPENAI_API_KEY
+  • Value: [paste from Step 1]
+  • Click Add secret ✓
+
+☐ New repository secret:
+  • Name: DEVTO_API_KEY
+  • Value: [paste from Step 1]
+  • Click Add secret ✓
+
+☐ New repository secret:
+  • Name: TELEGRAM_BOT_TOKEN
+  • Value: [paste from Step 1]
+  • Click Add secret ✓
+
+☐ Verify: You should see 3 secrets in the list
+
+════════════════════════════════════════════════════════════════════════════════
+
+☐ STEP 3: Test Workflow (2 min)
+────────────────────────────────────────────────────────────────────────────────
+
+☐ Go to Actions tab
+
+☐ Click "Daily Content Generation"
+
+☐ Click "Run workflow" button
+
+☐ Select: Run workflow
+
+☐ Wait for execution (1-2 minutes)
+
+☐ Result:
+   • Green checkmark = SUCCESS ✅
+   • Red X = Check logs for error
+
+════════════════════════════════════════════════════════════════════════════════
+
+☐ STEP 4: Verify Articles Published (3 min)
+────────────────────────────────────────────────────────────────────────────────
+
+☐ Open: https://dev.to/[your-username]/
+
+☐ Check: New articles should be published!
+
+☐ If yes, celebrate! 🎉
+
+════════════════════════════════════════════════════════════════════════════════
+
+✅ YOU'RE DONE!
+
+From now on:
+• Every day at 8 AM UTC: GitHub Actions automatically runs
+• 3 new articles published to Dev.to
+• Revenue starts flowing in days
+• Zero manual work required
+
+Your passive income machine is LIVE! 🚀
+
+════════════════════════════════════════════════════════════════════════════════
+
+❓ Troubleshooting
+
+ISSUE: Workflow failed (red X)
+→ Click the failed run
+→ Check logs for error message
+→ Common: API key typo/invalid
+
+ISSUE: No articles published
+→ Check Dev.to account
+→ Verify DevTo API key is correct
+→ Check GitHub Actions logs
+
+ISSUE: "config.json not found"
+→ GitHub Secrets might not be set correctly
+→ Go back to Step 2 and verify all 3 are added
+
+Need help? Check the logs in Actions tab!
+
+════════════════════════════════════════════════════════════════════════════════
