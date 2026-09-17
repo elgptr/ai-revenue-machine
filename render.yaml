@@ -1,0 +1,15 @@
+services:
+  - type: background_worker
+    name: ai-revenue-machine
+    runtime: python310
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main_render.py
+    envVars:
+      - key: OPENAI_API_KEY
+        scope: run
+      - key: DEVTO_API_KEY
+        scope: run
+      - key: TELEGRAM_BOT_TOKEN
+        scope: run
+      - key: ENVIRONMENT
+        value: production

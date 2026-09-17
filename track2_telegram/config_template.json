@@ -1,0 +1,7 @@
+{
+  "telegram_token": "YOUR_TELEGRAM_BOT_TOKEN",
+  "openai_api_key": "YOUR_OPENAI_API_KEY",
+  "stripe_key": "YOUR_STRIPE_API_KEY",
+  "stripe_price_id": "price_xxxxxxxxxxxxx",
+  "webhook_secret": "whsec_xxxxxxxxxxxxx"
+}

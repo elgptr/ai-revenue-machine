@@ -1,0 +1,14 @@
+{
+  "openai_api_key": "YOUR_OPENAI_API_KEY",
+  "niches": [
+    "AI & Technology",
+    "Passive Income Ideas",
+    "Productivity Tips",
+    "Remote Work",
+    "Side Hustles"
+  ],
+  "medium_token": "YOUR_MEDIUM_TOKEN",
+  "devto_token": "YOUR_DEVTO_TOKEN",
+  "ghost_url": "https://yourblog.com",
+  "ghost_token": "YOUR_GHOST_TOKEN"
+}

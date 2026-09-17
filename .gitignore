@@ -1,0 +1,15 @@
+config.json
+track1_content/config.json
+track2_telegram/config.json
+.env
+*.env
+automation.log
+__pycache__/
+.DS_Store
+*.pyc
+.pytest_cache/
+venv/
+*.log
+.idea/
+.vscode/
+*.pyo
