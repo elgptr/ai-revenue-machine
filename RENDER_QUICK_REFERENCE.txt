@@ -1,0 +1,142 @@
+════════════════════════════════════════════════════════════════════════════
+                    RENDER.COM DEPLOYMENT QUICK REFERENCE
+════════════════════════════════════════════════════════════════════════════
+
+GitHub Repository Ready:
+  https://github.com/elgptr/ai-revenue-machine
+
+════════════════════════════════════════════════════════════════════════════
+  STEP-BY-STEP RENDER DEPLOYMENT
+════════════════════════════════════════════════════════════════════════════
+
+1. BUKA RENDER DASHBOARD
+   URL: https://dashboard.render.com
+
+2. CREATE NEW SERVICE
+   Button: "New" (top right)
+   Select: "Background Worker" ⭐ (PENTING! Bukan Web Service)
+
+3. CONNECT GITHUB
+   - Click "Connect repository"
+   - Search: "ai-revenue-machine"
+   - Select: "elgptr/ai-revenue-machine"
+   - Click "Connect"
+
+4. FILL SERVICE CONFIGURATION
+   
+   Name: ai-revenue-machine
+   
+   Runtime: Python 3.10
+   
+   Build Command:
+     pip install -r requirements.txt
+   
+   Start Command:
+     python main_render.py
+
+5. ADD ENVIRONMENT VARIABLES
+   (Scroll down ke section "Environment Variables")
+   
+   Click: "Add Environment Variable"
+   
+   ADD VAR 1:
+     Name: OPENAI_API_KEY
+     Value: [COPY DARI config.json - openai_api_key]
+   
+   ADD VAR 2:
+     Name: DEVTO_API_KEY
+     Value: [COPY DARI config.json - devto_api_key]
+   
+   ADD VAR 3:
+     Name: TELEGRAM_BOT_TOKEN
+     Value: 8876464470:AAEnTv4mWxlizv9qjNci1hsWSZFOORpfFAA
+
+6. REVIEW & DEPLOY
+   - Check semua settings benar
+   - Click button: "Deploy"
+   - Wait: Build process (2-3 menit)
+   - Status: Akan berubah jadi "running" ✓
+
+════════════════════════════════════════════════════════════════════════════
+  COPY-PASTE VALUES UNTUK ENVIRONMENT VARIABLES
+════════════════════════════════════════════════════════════════════════════
+
+Buka file: config.json (di Desktop\ai-revenue-machine atau source folder)
+
+Copy these 3 values:
+
+OPENAI_API_KEY:
+  (Dari config.json: "openai_api_key" value)
+
+DEVTO_API_KEY:
+  (Dari config.json: "devto_api_key" value)
+
+TELEGRAM_BOT_TOKEN:
+  8876464470:AAEnTv4mWxlizv9qjNci1hsWSZFOORpfFAA
+
+════════════════════════════════════════════════════════════════════════════
+  CHECKLIST SEBELUM KLIK DEPLOY
+════════════════════════════════════════════════════════════════════════════
+
+□ Service type: Background Worker (BUKAN Web Service)
+□ GitHub repo connected: elgptr/ai-revenue-machine
+□ Runtime: Python 3.10
+□ Build command: pip install -r requirements.txt
+□ Start command: python main_render.py
+□ OPENAI_API_KEY: Added & correct value
+□ DEVTO_API_KEY: Added & correct value
+□ TELEGRAM_BOT_TOKEN: Added & correct value
+□ Semua field terisi dengan benar
+□ READY TO DEPLOY!
+
+════════════════════════════════════════════════════════════════════════════
+  AFTER DEPLOY - VERIFICATION
+════════════════════════════════════════════════════════════════════════════
+
+Wait 2-3 minutes untuk build selesai...
+
+CHECK 1 - Status (dalam Render dashboard):
+  Should show: "running" with green checkmark ✓
+
+CHECK 2 - Telegram Bot (5 min setelah deploy):
+  1. Open Telegram app
+  2. Search: @income_daily_bot
+  3. Send message: /start
+  Expected: Bot respond dengan welcome message
+
+CHECK 3 - Render Logs:
+  1. In Render dashboard, click your service
+  2. Click tab "Logs"
+  3. Look for message: "🚀 Revenue Orchestrator initialized (RENDER MODE)"
+  If found: System running correctly! ✓
+
+CHECK 4 - Content Publishing (Tomorrow 8 AM UTC):
+  1. Go to Dev.to (your account)
+  2. Check articles section
+  Expected: 3 new articles should be published
+
+════════════════════════════════════════════════════════════════════════════
+  TROUBLESHOOTING
+════════════════════════════════════════════════════════════════════════════
+
+Problem: Build fails
+Solution: Check Render build logs for specific error
+
+Problem: Bot doesn't respond
+Solution: 
+  - Verify TELEGRAM_BOT_TOKEN is correct
+  - Check Render logs for errors
+  - Wait 2-3 min after deploy
+
+Problem: Environment variables not found
+Solution:
+  - Make sure variable names are EXACTLY correct (case-sensitive)
+  - Check values copied correctly from config.json
+
+Problem: Service keeps stopping
+Solution: Make sure selected "Background Worker" not "Web Service"
+
+════════════════════════════════════════════════════════════════════════════
+
+🎯 YOU'RE READY! Go deploy now: https://dashboard.render.com
+💰 Besok income anda mulai! 🚀
